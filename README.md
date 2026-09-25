@@ -16,3 +16,11 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 测试
+
+阶段模型（`src/utils/restorationStages.js`）使用 Node 内置测试运行器，无额外依赖：
+
+```bash
+npm test
+```

@@ -1,5 +1,6 @@
 <script setup>
 import { riskMeta } from '../../utils/restorationFormatters'
+import { stageLabel } from '../../utils/restorationStages'
 
 defineProps({
   items: {
@@ -24,7 +25,7 @@ defineProps({
       </div>
       <h4>{{ item.title }}</h4>
       <p>页码：{{ item.pages }}</p>
-      <p>阶段：{{ item.status }}</p>
+      <p>阶段：{{ stageLabel(item.status) }}</p>
       <small>{{ item.note }}</small>
     </article>
   </div>
