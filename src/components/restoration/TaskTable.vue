@@ -1,5 +1,6 @@
 <script setup>
 import { riskMeta } from '../../utils/restorationFormatters'
+import { stageLabel } from '../../utils/restorationStages'
 
 defineProps({
   rows: {
@@ -24,7 +25,7 @@ defineProps({
       class="task-row"
     >
       <span>{{ row.title }}</span>
-      <span>{{ row.stage }}</span>
+      <span>{{ stageLabel(row.stage) }}</span>
       <span :class="['risk-tag', `risk-tag--${riskMeta(row.risk).tone}`]">
         {{ riskMeta(row.risk).label }}
       </span>
